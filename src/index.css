@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 97%;
+    --foreground: 270 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 15%;
+
+    --primary: 270 58% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 12 100% 73%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 33% 94%;
+    --muted-foreground: 270 10% 40%;
+
+    --accent: 42 100% 75%;
+    --accent-foreground: 270 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 270 20% 85%;
+    --input: 270 20% 85%;
+    --ring: 270 58% 63%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-empowerkind-cream text-foreground font-sans;
+  }
+
+  /* Custom classes */
+  .hero-gradient {
+    @apply bg-gradient-to-br from-empowerkind-purple/20 via-empowerkind-coral/10 to-empowerkind-yellow/20;
+  }
+
+  .btn-primary {
+    @apply bg-empowerkind-purple hover:bg-empowerkind-darkPurple text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-empowerkind-coral hover:bg-empowerkind-coral/80 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-empowerkind-darkPurple;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .card-shadow {
+    @apply shadow-[0_10px_40px_-15px_rgba(138,100,221,0.3)];
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-empowerkind-purple/30 focus:outline-none focus:border-empowerkind-purple focus:ring-2 focus:ring-empowerkind-purple/20 bg-white;
+  }
+
+  .form-label {
+    @apply block mb-2 text-sm font-medium text-gray-700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
